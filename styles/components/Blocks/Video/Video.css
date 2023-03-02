@@ -1,0 +1,12 @@
+.block_video{
+    /* border: 1px solid red; */
+    padding-bottom: var(--gapL);
+}
+
+.block_video_surtitle{
+    padding: var(--gapS);
+}
+
+:root{
+    --plyr-color-main: var(--highlightColor);
+}

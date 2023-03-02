@@ -1,0 +1,166 @@
+.filter{
+    height: 100vh;
+    width: calc(((100vw - var(--scrollbarWidth))/6)*2);
+    
+    position: fixed;
+    top: 0;
+    padding-right: 2px;
+    overflow-y: scroll;
+    /* top: calc(48px + (var(--fontSizeHeader)*var(--lineHeightS))*2 + var(--gapS)); */
+    /* margin-top: calc((48px + (var(--fontSizeHeader)*var(--lineHeightS))*2 + var(--gapS))* -1); */
+    padding-top: calc(var(--navBarHeight) + (var(--fontSizeHeader)*var(--lineHeightS))*2 + var(--gapXS));
+    
+    /* enable click-through for menu */
+    pointer-events: none;
+    
+    /* hide scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* hide scrollbar */
+.filter::-webkit-scrollbar {
+    display: none;
+}
+
+/* enable click-through for menu */
+/* while still being able to scroll -> SEE JS */
+/* while still being able to click filters: */
+.filter * {
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 800px){
+    .filter{
+        height: auto;
+        width: auto;
+        
+        position: relative;
+        top: 0;
+        padding-top: 0 !important;
+        padding-right: 0;
+        overflow-y: visible; 
+    }
+}
+
+.filter_masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: 0; /* gutter size offset */
+    width: auto;
+}
+
+.filter_masonry-grid_column {
+    padding-left: 0; /* gutter size */
+    background-clip: padding-box;
+}
+
+.filterOption{
+    /* margin-left: var(--gapS); */
+    padding: 0 var(--gapS);
+    color: var(--textColorDeselected);
+    cursor: default;
+    pointer-events: none;    
+}
+
+.filterOption:first-of-type{
+    margin-top: var(--gapS);
+}
+
+.filterOption:last-of-type{
+    margin-bottom: var(--gapS);
+}
+
+/* .filterOption:hover{
+    background-color: grey;
+} */
+
+.filterOptionActive{ 
+    color: var(--textColor);
+    cursor: pointer;
+    pointer-events: auto;       
+}
+
+.filterOptionSelected{
+    text-decoration: underline;
+    cursor: pointer;
+    pointer-events: auto;       
+}
+
+.filterLine, .filterAccordion .accordion_title{
+    text-transform: uppercase;
+    padding: var(--gapXS) calc(2*var(--gapS) + var(--iconHeight)) 0 var(--gapS);
+    position: relative;
+}
+
+.filterLine, .filterAccordion{
+    margin: 0 0 var(--gapS) var(--gapS);
+}
+
+/* .filterAccordion{
+    text-transform: uppercase;
+    padding: var(--gapXS) var(--gapS) 0 var(--gapS);
+    position: relative;
+    margin: 0 0 var(--gapS) var(--gapS);
+} */
+
+.closingX{
+    width: var(--iconHeight);
+    height: var(--iconHeight);
+    position: absolute;
+    right: var(--gapS);
+    top: var(--gapS);
+    background-image: url('/assets/x.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.closingX.hidden{
+    display: none;
+}
+
+
+
+
+/* fix bug with alignment of leftSide / rightSide browser specifically */
+/* firefox */
+@-moz-document url-prefix() {
+    .filter {
+        padding-top: calc(var(--navBarHeight) + var(--firefoxFilterAlignmentBuffer) + (var(--fontSizeHeader)*var(--lineHeightS))*2 + var(--gapXS));
+    }
+}
+
+/* safari */
+/* @media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        .filter {
+            padding-top: calc(48.5px + (var(--fontSizeHeader)*var(--lineHeightS))*2 + var(--gapXS));
+        }
+    }
+} */
+
+.search div input{
+    margin: 0;
+    padding: 0;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    
+    width: 100%;
+    font-family: 'AlteHaasGrotesk' ,sans-serif;
+    line-height: 1.14;
+    font-size: var(--fontSizeS);
+    color: var(--highlightColor);
+}
+
+.search div input::placeholder{
+    color: var(--textColorPlaceholder)
+}
+
+.search div input:focus{
+    outline: none;
+}

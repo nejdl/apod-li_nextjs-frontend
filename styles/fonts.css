@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'AlteHaasGrotesk';
+  /* src: url('/fonts/AlteHaasGroteskRegular.woff') format('woff'), 
+    url('/fonts/AlteHaasGroteskRegular.woff2') format('woff2'),
+    url('/fonts/AlteHaasGroteskRegular.ttf') format('ttf'); */
+  src: url('/fonts/AlteHaasGrotesk.woff') format('woff'), 
+    url('/fonts/AlteHaasGrotesk.woff2') format('woff2'),
+    url('/fonts/AlteHaasGrotesk.ttf') format('ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'AlteHaasGrotesk';
+  src: url('/fonts/AlteHaasGroteskBold.woff') format('woff'), 
+    url('/fonts/AlteHaasGroteskBold.woff2') format('woff2'),
+    url('/fonts/AlteHaasGroteskBold.ttf') format('ttf');
+  font-weight: bold;
+}

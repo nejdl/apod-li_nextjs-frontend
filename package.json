@@ -1,0 +1,30 @@
+{
+  "name": "apodli-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "caniuse-lite": "^1.0.30001233",
+    "html-react-parser": "^3.0.4",
+    "latinize": "^0.5.0",
+    "lazysizes": "^5.3.0-beta1",
+    "nanoid": "^4.0.0",
+    "next": "^12.3.1",
+    "plyr-react": "^5.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga": "^3.2.1",
+    "react-image-lightbox": "^5.1.1",
+    "react-markdown": "^8.0.3",
+    "react-masonry-css": "^1.0.14",
+    "react-swipeable": "^7.0.0",
+    "rehype-raw": "^6.1.1",
+    "use-media": "^1.4.0"
+  }
+}

@@ -1,0 +1,11 @@
+.BookDetail_PublicationGroup_title{
+    font-size: var(--fontSizeL);
+    padding: var(--gapS) var(--gapS) 0 var(--gapS);
+}
+
+.BookDetail_PublicationGroup_subtitle{
+    padding: 0 var(--gapS) var(--gapS) var(--gapS);
+    font-size: var(--fontSizeM);
+    /* font-size: var(--fontSizeS); */
+    /* text-transform: uppercase; */
+}

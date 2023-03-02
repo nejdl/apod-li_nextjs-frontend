@@ -1,0 +1,34 @@
+.block_event {
+    margin-bottom: 1em;
+    display: flex;
+    padding: var(--gapS) var(--gapS) 0 var(--gapS);
+}
+
+.block_event_year{
+    /* font-size: var(--fontSizeS);
+    font-size: var(--fontSizeXS); */
+    font-size: var(--fontSizeM);
+    padding: var(--gapS) var(--gapS) 0 var(--gapS);
+}
+
+.block_event_info{
+    flex: 1 0 80%;  
+}
+.block_event_title{
+    font-size: var(--fontSizeM);
+}
+.block_event_subtitle{
+    
+}
+.block_event_url{
+    color: inherit;
+}
+.block_event_date{
+    flex: 1 0 20%;
+}
+.block_event_startDate{
+    font-variant-numeric: tabular-nums lining-nums;
+}
+.block_event_endDate::before{
+    content: '– ';
+}

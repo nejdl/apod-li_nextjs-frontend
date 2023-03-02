@@ -1,0 +1,56 @@
+/* general */
+@import 'variables.css';
+@import 'fonts.css';
+@import './pages/index.css';
+@import './pages/descriptions.css';
+
+/* Navigation */
+@import './components/Navigation/NavigationBar/NavigationBar.css';
+@import './components/Navigation/Header/Header.css';
+
+/* Blocks */
+@import './components/Blocks/Accordion/Accordion.css';
+@import './components/Blocks/Title/Title.css';
+@import './components/Blocks/Border/Border.css';
+@import './components/Blocks/Event/Event.css';
+@import './components/Blocks/Reference/Reference.css';
+@import './components/Blocks/Text/Text.css';
+@import './components/Blocks/Image/Image.css';
+@import './components/Blocks/Video/Video.css';
+
+/* BookPreview */
+@import './components/Book/BookPreview/BookPreview.css';
+@import './components/Book/BookPreview/Coverimage/Coverimage.css';
+
+/* BookDetail */
+@import './components/Book/BookDetail/ImageGallery/ImageGallery.css';
+@import './components/Book/BookDetail/ImageGallery/LightBox/LightBox.css';
+@import './components/Book/BookDetail/BackButton/BackButton.css';
+@import './components/Book/BookDetail/BookDetail.css';
+@import './components/Book/BookDetail/Related/Related.css';
+@import './components/Book/BookDetail/MetaData/MetaData.css';
+@import './components/Book/BookDetail/Links/Links.css';
+@import './components/Book/BookDetail/PublicationGroup/PublicationGroup.css';
+
+/* NewsElement */
+@import './components/NewsElement/NewsElement.css';
+
+/* Filter */
+@import './components/Filter/Filter.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'AlteHaasGrotesk', sans-serif;
+  line-height: 1.1;
+}
+
+div {
+  /* border: 1px solid black; */
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}

@@ -1,0 +1,17 @@
+.BookPreview_coverimage, .BookPreview_noCoverimage{
+    width: 100%;
+    background-color: var(--textColorDeselected);
+    /* background-color: var(--textColorSelected); */
+    /* background-color: var(--highlightColor); */
+}
+
+.BookPreview_noCoverimage{
+    height: 300px;
+}
+
+.BookPreview_coverimage img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin-bottom: -2px;
+}

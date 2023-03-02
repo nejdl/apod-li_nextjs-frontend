@@ -1,0 +1,35 @@
+.block_title{
+    font-size: var(--fontSizeXL);
+    text-transform: uppercase;
+    padding: var(--gapS) var(--gapS) var(--gapS) var(--gapS); 
+    /* padding: var(--gapS) var(--gapS) 0 var(--gapS);  */
+    line-height: var(--lineHeightS);
+    /* line-height: var(--lineHeightM); */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;  
+    hyphens: auto;
+}
+
+.block_title p{
+    margin: 0;
+}
+
+.block_title sup, .block_title sub{
+    font-size: 60%;
+}
+
+.bookPage .block_title{
+    text-transform: none;
+}
+
+.block_subtitle{
+    margin: var(--gapS) 0;
+    padding: 0 var(--gapS);
+    font-size: var(--fontSizeL);
+    /* font-size: var(--fontSizeM); */
+    line-height: var(--lineHeightS);
+}

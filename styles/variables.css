@@ -1,0 +1,136 @@
+:root {
+  /* gaps */
+  --gapXS: 3px;
+  --gapS: 5px;
+  --gapSM: 8px;
+  --gapM: 10px;
+  --gapL: 15px;
+
+  /* sizes */
+  --fontSizeXS: 10px;
+  --fontSizeS: 16px;
+  --fontSizeM: 24px;
+  --fontSizeL: 32px;
+  --fontSizeXL: 60px;
+  --fontSizeHeader: 9.3vw;
+  --fontSizeHeaderMobile: 9.3vw;
+  /* --fontSizeHeader: 9.5vw;
+    --fontSizeHeaderMobile: 9.4vw; */
+  --navBarHeight: 49px; /* will be updated dynamically */
+  --firefoxFilterAlignmentBuffer: 3.5px;
+
+  --lineHeightS: 0.9;
+  --lineHeightM: 1.1;
+
+  --borderWidth: 1px;
+
+  --iconHeight: 0.9em;
+  --iconHeightSmall: 0.7em;
+  /* --iconHeightLarge: 0.9em; */
+  --iconHeightLarge: 1.4em;
+  --iconHeightExtraLarge: 2.8em;
+
+  /* text-colors */
+  --textColor: black;
+  /* --textColorSelected: rgb(206, 197, 197); */
+  --textColorSelected: black;
+  --textColorDeselected: #c7c7c7;
+  --textColorDeselectedRGB: 199;
+  --textColorMetaData: grey;
+  --textColorHover: grey;
+  --textColorLink: black;
+  --textColorPlaceholder: rgb(190, 190, 190);
+
+  /* colors */
+  --hoverColor: lightgrey;
+  --bgColor: grey;
+  --highlightColor: #8b8bef;
+  --backgroundColorGreyTransparent: rgba(199, 199, 199, 0.5);
+  --backgroundColorWitouthTransparency: #e3e3e3;
+
+  /* scrollbar width */
+  --scrollbarWidth: 0px;
+}
+
+.border,
+.filterAccordion .accordion_title {
+  border-top: var(--borderWidth) solid var(--textColor);
+  border-left: var(--borderWidth) solid var(--textColor);
+  border-right: var(--borderWidth) solid var(--textColor);
+}
+
+.borderBottom {
+  border-bottom: var(--borderWidth) solid var(--textColor);
+  border-left: var(--borderWidth) solid var(--textColor);
+  border-right: var(--borderWidth) solid var(--textColor);
+}
+
+.blur,
+.filterLine,
+.filterAccordion,
+.backButton {
+  backdrop-filter: none;
+  background-color: white;
+}
+
+.greyTransparent {
+  background-color: var(--backgroundColorWitouthTransparency);
+  position: relative;
+}
+
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  .blur,
+  .filterLine,
+  .filterAccordion,
+  .backButton {
+    -webkit-backdrop-filter: blur(8px);
+    background-color: transparent;
+  }
+  .greyTransparent {
+    background-color: var(--backgroundColorGreyTransparent);
+  }
+}
+
+@supports (backdrop-filter: blur(1px)) {
+  .blur,
+  .filterLine,
+  .filterAccordion,
+  .backButton {
+    backdrop-filter: blur(8px);
+    background-color: transparent;
+  }
+  .greyTransparent {
+    background-color: var(--backgroundColorGreyTransparent);
+  }
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/* Text Selection */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: var(--textColorDeselected);
+}
+
+::selection {
+  background: var(--textColorDeselected);
+}
+
+/* mediaqueries */
+@value mediaQuerySticky: (max-width: 800px);
+@value mediaQueryMobile: (max-width: 500px);
+@value mediaQueryTablet: (min-width: 500px) and (max-width: 956px);
+@value mediaQueryDesktop: (min-width: 956px);

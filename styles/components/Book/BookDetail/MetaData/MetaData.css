@@ -1,0 +1,157 @@
+.BookDetail_MetaData_Header{
+    padding: var(--gapS) 0 var(--gapS) var(--gapS);
+    display: flex;
+    font-size: var(--fontSizeXS);
+}
+
+.BookDetail_MetaData_Header .accordion_title{
+    font-size: var(--fontSizeXS);
+    padding: 0;
+    display: inline;
+}
+
+.BookDetail_MetaData_Header .border, .BookDetail_MetaData_Author .accordion .border{
+    border: none;
+}
+
+.BookDetail_MetaData_Header .accordion_toggleArrow, .BookDetail_MetaData_Author .accordion_toggleArrow{
+    width: var(--iconHeightSmall);
+    height: var(--iconHeightSmall);
+    background-image: url('/assets/plus.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    left: var(--gapS);
+    top: 0;
+}
+
+.BookDetail_MetaData_Header .accordion_toggleArrow.open, .BookDetail_MetaData_Author .accordion_toggleArrow.open{
+    background-image: url('/assets/minus.svg');
+    background-repeat: no-repeat;
+}
+
+.BookDetail_MetaData_Header .accordionText, .BookDetail_MetaData_Author .accordionText{
+    color: var(--textColorMetaData);
+    padding-bottom: var(--gapS);
+}
+
+.metaData_title{
+    padding: var(--gapS) 0 var(--gapS) var(--gapS);
+    text-transform: uppercase;
+    font-size: var(--fontSizeXS);
+
+    /* style edition characteristics meta data title to overflow with ellipsis */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* style edition characteristics meta data title in one instead of two lines 
+if media query is wide enough */
+@media screen and (min-width: 1300px){
+    .metaData_title div{
+        display: inline;
+    }
+    .metaData_title div::after{
+        content: ' ';
+    }
+}
+
+.BookDetail_MetaData_Header .metaData_title{
+    padding: 0;
+}
+
+.BookDetail_MetaData_Header > div{
+    flex: 1 0 calc(100%/6);
+    overflow: hidden;
+}
+
+.BookDetail_MetaData_Header > div > div{
+    /* margin: 0 var(--gapS) var(--gapS) 0; */
+    /* margin: 0 var(--gapS) var(--gapM) 0; */
+    margin: 0 var(--gapS) var(--gapL) 0;
+}
+
+/* location */
+.BookDetail_MetaData_Location{
+    display: inline;
+}
+
+.BookDetail_MetaData_Location::after{
+    white-space: pre;
+    content: ', ';
+}
+
+.BookDetail_MetaData_Location:last-of-type::after{
+    content: '';
+}
+
+/* format */
+.MetaData_Format_container{
+    width: calc((100%/6)*2);
+}
+
+.MetaData_Format {
+    font-size: var(--fontSizeXS);
+}
+
+.MetaData_Format .metaData_content{
+    padding: 0 var(--gapS) var(--gapS) var(--gapS);
+}
+
+@media screen and (max-width: 500px){
+    .MetaData_Format_container{
+        width: 50%;
+    }
+}
+
+/* highlighted meta data author */
+.BookDetail_MetaData_Author .metaData_content{
+    font-weight: bold;
+    padding: 0 var(--gapS) var(--gapS) var(--gapS);
+    font-size: var(--fontSizeS);
+}
+
+.BookDetail_MetaData_Author .accordion_title{
+    font-size: var(--fontSizeS);
+    padding: 0;
+    display: inline;
+}
+
+
+/* position highlighted meta data author next to meta data header */
+.BookDetail_MetaDataContainer{
+    display: flex;
+}
+
+.BookDetail_MetaData_Author{
+    flex: 1 0 calc((100%/6)*2);
+    margin-right: calc(var(--borderWidth)*-1);
+}
+.BookDetail_MetaData_HeaderContainer{
+    flex: 1 0 calc((100%/6)*4);
+}
+
+@media screen and (max-width: 500px){
+    .BookDetail_MetaDataContainer{
+        flex-wrap: wrap;
+    }
+    .BookDetail_MetaData_Author{
+        flex: 1 0 100%;
+    }
+}
+
+/* remove margin from accordion on meta data */
+.metaData_content .accordionText .block_text, .metaData_content .accordionText .block_text p{
+    margin: 0;
+}
+
+.metaData_content .accordionText .block_text a{
+    color: var(--textColorMetaData);
+}
+
+@media (hover: hover) {
+    .metaData_content .accordionText .block_text a:hover{
+        color: var(--textColorSelected);
+    }
+}

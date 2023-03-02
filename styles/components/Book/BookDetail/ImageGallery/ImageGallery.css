@@ -1,0 +1,164 @@
+.imageSlider{
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    
+    /* disable selection */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+    
+}
+
+.imageSlider div{
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+img.imageSlide{
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: auto;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@media (hover: hover){
+    img.imageSlide:hover{
+        opacity: 0.5;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .imageSlider{
+        height: 320px;
+    }
+    img.imageSlide{
+        object-fit: contain;
+        width: 100%;
+    }
+}
+
+.imageSliderDotContainer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageSliderDot{
+    background-color: inherit;
+    width: 1.5em;
+    height: 0.5em;
+    border-left: 1px solid black;
+    /* width: 10px;
+    height: 10px; 
+    border-radius: 100%; */
+    /* border: 1px solid black; */
+    /* margin-top: var(--gapS); */
+    /* margin-right: var(--gapS); */
+}
+
+.imageSliderDot:last-of-type{
+    border-right: 1px solid black;
+    /* margin-right: 0; */
+}
+
+.imageSliderDot.selected{
+    background-color: black;
+    /* background-color: grey; */
+}
+
+.imageSliderContainer{
+    position: relative;
+    
+    /* to sustain padding below image gallery, if there is no subtitle */
+    margin-bottom: var(--gapM);
+}
+
+button.imageSliderButtonLeft:active, button.imageSliderButtonRight:active{
+    opacity: 0.7;
+}
+
+button.imageSliderButtonLeft, button.imageSliderButtonRight{
+    border: none;
+    background-color: inherit;
+    margin: var(--gapS);
+    width: var(--iconHeightLarge);
+    height: var(--iconHeightLarge);
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('/assets/arrowLarge.svg');
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+button.lightboxButton{
+    border: none;
+    background-color: inherit;
+    margin: var(--gapS);
+    width: var(--iconHeightLarge);
+    height: var(--iconHeightLarge);
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('/assets/enlarge.svg');
+    /* background-image: url('/assets/plus.svg'); */
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    /* right: calc(var(--iconHeightLarge)*-1 - var(--gapS)*2); */
+    z-index: 100;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 500px) {
+    button.lightboxButton{
+        display: none;
+    }
+}
+
+button.imageSliderButtonRight{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: rotate(-90deg);
+}
+
+button.imageSliderButtonLeft{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: rotate(90deg);
+}
+
+button:focus {
+    outline: none;
+}
+
+.BookDetail_image-subtitle{
+    font-size: var(--fontSizeXS);
+    padding: var(--gapS);
+    min-height: calc(1.1em + var(--gapS)*2); 
+    /* to sustain padding below image gallery, if there is no subtitle */
+    margin-top: calc(var(--gapM)*-1);
+}
+

@@ -1,0 +1,47 @@
+.BookDetail_Links{
+    padding: var(--gapS);
+}
+
+.BookDetail_Links a{
+    color: var(--textColor);
+    padding-right: var(--gapS);
+    display: inline-block;
+}
+
+.BookDetail_Links a::after{
+    content: ', ';
+    text-decoration: none;
+    display: inline;
+}
+
+.BookDetail_Links a:last-of-type{
+    padding-right: 0;
+}
+
+.BookDetail_Links a:last-of-type::after{
+    content: '';
+}
+
+.BookDetail_Links a:hover{
+    color: var(--textColorHover)
+}
+
+.BookDetail_Links_title{
+    display: inline; 
+}
+
+.BookDetail_Links_availability{
+    display: inline; 
+    font-style: italic;
+}
+
+/* add comma between title + availability */
+.BookDetail_Links_availability::before{
+    content: ', ';
+    font-style: normal;
+}
+
+/* hide comma, if there is no title before availability */
+.BookDetail_OpacLink div:first-of-type::before{
+    content: '';
+}

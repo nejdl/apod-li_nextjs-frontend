@@ -1,0 +1,37 @@
+.backButton_container{
+    margin-left: var(--gapS);
+    /* margin-bottom: var(--gapS); */
+    margin-bottom: 1em;
+    position: -webkit-sticky;
+    position: sticky;
+    /* top: calc(48px + (var(--fontSizeHeader)*var(--lineHeightS))*2 + var(--gapS)); */
+    top: calc(var(--navBarHeight) + (var(--fontSizeHeader)*var(--lineHeightS))*2 + var(--gapXS));
+}
+
+.backButton{
+    padding: var(--gapXS) calc(2*var(--gapS) + var(--iconHeight)) 0 var(--gapS);
+    position: relative;
+}
+
+.backButton_arrow{
+    width: var(--iconHeight);
+    height: var(--iconHeight);
+    position: absolute;
+    right: var(--gapS);
+    top: var(--gapS);
+    background-image: url('/assets/arrow.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: rotate(90deg)
+}
+
+.backButton a{
+    text-transform: uppercase;
+    color: var(--textColorLink);
+    text-decoration: none;
+}
+
+/* @media screen and (max-width: 800px){
+    .backButton_container{
+    }
+} */

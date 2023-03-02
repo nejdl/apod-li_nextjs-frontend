@@ -1,0 +1,20 @@
+.block_image{
+    /* border: 1px solid red; */
+    padding-bottom: var(--gapL);
+}
+
+.block_image_surtitle{
+    padding: var(--gapS);
+}
+
+.block_image img{
+    padding-top: 1px;
+    display: block;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 1200px){
+    .block_image img{
+        max-width: 100%;
+    }
+}

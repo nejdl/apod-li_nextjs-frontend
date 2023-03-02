@@ -1,0 +1,108 @@
+.BookPreview_container a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.BookPreview_header{
+}
+
+.BookPreview_title{
+    font-size: var(--fontSizeM);
+    overflow: hidden;
+    text-transform: uppercase;
+    padding: var(--gapS);
+
+    /* shorten with ellipsis when word is too long */
+    text-overflow: ellipsis;
+}
+
+.BookPreview_title p{
+    margin: 0;
+}
+
+.BookPreview_title sup, .BookPreview_title sub{
+    font-size: 60%;
+}
+
+.BookPreview_subtitle{
+    /* background-color: red; */
+    padding: 0 var(--gapS) var(--gapSM) var(--gapS);
+    /* padding: 0 var(--gapS) var(--gapL) var(--gapS); */
+}
+
+.BookPreview_metaData{    
+    margin: 0 var(--gapS) var(--gapS) var(--gapS);
+    display: flex;
+    font-size: var(--fontSizeXS);
+    text-transform: uppercase;
+
+    /* color: var(--textColorMetaData); */
+}
+
+.BookPreview_metaData > div{
+    flex: 1 0 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.BookPreview_metaData > div:first-of-type{
+    padding-right: var(--gapS);
+}
+
+.BookPreview_metaData > div > div{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 
+.BookPreview_metaData > div > div {
+    background-color: black;
+    background-image: linear-gradient(90deg, black 50%, transparent 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+} */
+
+/* no support backdrop-filter
+@supports ( (not (-webkit-backdrop-filter: blur(1px))) or (not (backdrop-filter: blur(1px)))  ) {
+    .BookPreview_metaData_gradient{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(90deg, rgba(227,227,227,0) 90%, var(--backgroundColorWitouthTransparency) 100%);
+    }
+} */
+
+.BookPreview_metaData > div > div > div::after{
+    white-space: pre;
+    content: ', ';
+}
+
+.BookPreview_metaData > div > div > div:last-of-type::after{
+    content: '';
+}
+
+.BookPreview_metaData > div > div > div{
+    display: inline;
+    /* display: inline-block; */
+}
+
+/* meta data author highlight styling */
+.BookPreview_metaDataContainer_authors{
+    padding-bottom: var(--gapXS);
+    font-weight: bold;
+    /* transform: skew(-10deg); */
+    /* font-style: italic; */
+    /* color: var(--textColorMetaData); */
+    /* color: black; */
+    /* color: var(--highlightColor); */
+}
+
+.BookPreview_metaDataContainerTop_authors{
+    color: var(--textColorMetaData);
+    padding-top: var(--gapS);
+    margin-bottom: -2px;
+}

@@ -1,0 +1,24 @@
+.navBarContainer{
+    top: 0;
+}
+#header{
+    text-transform: uppercase;
+    font-size: var(--fontSizeHeader);
+    /* font-weight: bold; */
+    color: inherit;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 0 var(--gapS) var(--gapXS);
+    line-height: var(--lineHeightS);
+    overflow: hidden;
+    cursor: pointer;
+    /* background-image: url('/assets/title.svg'); */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+    #header{
+        font-size: var(--fontSizeHeaderMobile);
+    }
+}

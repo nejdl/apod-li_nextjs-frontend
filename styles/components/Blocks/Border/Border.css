@@ -1,0 +1,16 @@
+.borderTop{
+    height: 1.3em;
+    margin-bottom: -1.3em;
+    /* margin-bottom: calc(-1em + var(--borderWidth)); */
+}
+
+.borderBottom{
+    height: 1.3em;
+    margin-top: calc(-1.3em);
+    /* margin-bottom: 1em; */
+    /* margin-top: calc(-1em + var(--borderWidth)); */
+}
+
+.bookPage .borderBottom{
+    margin-bottom: 1em;
+}

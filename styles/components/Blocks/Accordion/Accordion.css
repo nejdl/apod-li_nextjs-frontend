@@ -1,0 +1,48 @@
+.accordion{
+    position: relative;
+}
+
+.accordion_title{
+    padding: var(--gapS);
+    font-size: var(--fontSizeM);
+}
+
+.filterAccordion .accordion_title{
+    font-size: var(--fontSizeS);
+
+    /* style edition characteristics meta data title to overflow with ellipsis */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* style edition characteristics meta data title in one instead of two lines 
+if media query is wide enough */
+@media screen and (min-width: 1510px){
+    .filterAccordion .accordion_title div{
+        display: inline;
+    }
+    .filterAccordion .accordion_title div::after{
+        content: ' ';
+    }
+}
+
+.accordion_toggleArrow{
+    transition: transform 0.3s ease-in-out;
+    width: var(--iconHeight);
+    height: var(--iconHeight);
+    position: absolute;
+    right: var(--gapS);
+    top: var(--gapS);
+    background-image: url('/assets/arrow.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}    
+
+.accordion_toggleArrow.open{
+    transform: rotate(180deg);
+}    
+
+.accordionText.hidden{
+    display: none;
+}

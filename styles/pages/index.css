@@ -1,0 +1,117 @@
+.masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: 0; /* gutter size offset */
+    
+    /* FOR FIREFOX 82 */
+    width: calc(((100vw - var(--scrollbarWidth))/6)*4 - var(--gapXS));
+    /* width: calc((100vw/6)*4 - var(--gapXS) - var(--scrollbarWidth)); */
+    max-width: 100%;
+    /* margin-top: -2px; */
+}
+
+@media screen and (max-width: 800px) {
+    .masonry-grid {
+        width: calc(((100vw/6)*6) - var(--gapS));
+    }
+}
+
+.masonry-grid_column {
+    padding-left: var(--gapS); /* gutter size */
+    background-clip: padding-box;
+}
+
+/* Style your items */
+.masonry-grid_column .BookPreview_container { /* change div to reference your elements you put in <Masonry> */
+    margin-bottom: var(--gapM);
+}
+
+.siteBody{
+    width: 100%;
+}
+
+.mainSection{
+    display: flex;
+    justify-content: flex-start; 
+    margin-right: var(--gapS);
+}
+
+.mainSection.bookPage{
+    flex-direction: row-reverse;
+}
+
+.leftSide{
+    flex: 1 1 calc((100%/6)*2);
+}
+
+.rightSide{
+    flex: 0 1  calc(((100vw - var(--scrollbarWidth))/6)*4);
+    width: calc(((100vw - var(--scrollbarWidth))/6)*4);
+}
+
+.errorPage, .contentPage{
+    flex: 0 1 calc(((100vw - var(--scrollbarWidth) - var(--gapM) - 1px)/6) * 4);
+}
+
+.mainSection.subPage{
+    justify-content: flex-end; 
+    margin-left: var(--gapS);
+    margin-bottom: 1em;
+}
+
+.bookPage .rightSide{
+    padding-left: calc(var(--gapS) - 1px);
+}
+
+.bookPage .bookDetail .masonry-grid{
+    margin-left: calc(var(--gapS)*-1);
+}
+
+@media screen and (max-width: 800px){
+    .mainSection, .mainSection.bookPage{
+        flex-direction: column;
+    }
+    
+    .rightSide{
+        width: calc((100%/6)*6);
+    }    
+
+    .errorPage, .contentPage{
+        flex: 1 1 auto;
+    }
+}
+
+/* loading spinner */
+.lds-circle {
+    display: block;
+    margin-left: 50%;
+    transform: translateZ(1px) translateX(-32px);
+    margin-top: 20%;
+}
+
+.lds-circle > div {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    background: var(--highlightColor);
+    animation: lds-circle 5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes lds-circle {
+    0%, 100% {
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(1800deg);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+        transform: rotateY(3600deg);
+    }
+}

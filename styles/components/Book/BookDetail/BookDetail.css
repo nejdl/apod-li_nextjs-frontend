@@ -1,0 +1,45 @@
+.BookDetail_subtitle{
+    padding: var(--gapS) var(--gapS) 0 var(--gapS);
+    font-size: var(--fontSizeXS);
+    text-transform: uppercase;
+}
+
+.BookDetail_images{
+    margin-top: var(--borderWidth);
+    padding-bottom: var(--gapS);
+}
+
+.BookDetail_Footer{
+    display: flex;
+    margin-left: calc(var(--borderWidth)*1);
+}
+
+.BookDetail_Footer .BookDetail_Links_container{
+    flex: 1 0 calc((100%/6)*2);
+    margin-left: calc(var(--borderWidth)*-1);
+}
+
+.BookDetail_Footer .BookDetail_OpacLinks_container{
+    flex: 1 0 calc((100%/6)*2);
+    margin-left: calc(var(--borderWidth)*-1);
+}
+
+.BookDetail_Footer .BookDetail_Bibliography_container{
+    flex: 1 0 calc((100%/6)*2);
+    margin-left: calc(var(--borderWidth)*-1);
+}
+
+.BookDetail_Footer .BookDetail_Bibliography_container p{
+    margin: 0;
+    font-size: var(--fontSizeXS);
+}
+
+@media screen and (max-width: 500px){
+    .BookDetail_Footer{
+        flex-wrap: wrap;
+    }
+    .BookDetail_Footer .BookDetail_Bibliography_container{
+        flex: 1 0 100%;
+    }
+}
+

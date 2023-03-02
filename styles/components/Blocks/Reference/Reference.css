@@ -1,0 +1,4 @@
+.block_reference_year{
+    font-size: var(--fontSizeM);
+    padding: var(--gapS) var(--gapS) 0 var(--gapS);
+}

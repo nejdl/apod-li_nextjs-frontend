@@ -1,0 +1,18 @@
+.siteBody_descriptions {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.property,
+.value {
+  font-size: 12px;
+  /* font-size: smaller; */
+  color: grey;
+  text-indent: 30px;
+}
+.property {
+  text-transform: uppercase;
+  font-weight: bold;
+}
